@@ -9,4 +9,9 @@ RSpec.describe Dollar do
     product = five.times(3)
     expect(product.amount).to eq 15
   end
+
+  it 'equality' do
+    expect(Dollar.new(5)).to eq Dollar.new(5)
+    expect(Dollar.new(5)).not_to eq Dollar.new(6)
+  end
 end

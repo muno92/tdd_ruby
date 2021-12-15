@@ -5,4 +5,5 @@ class Dollar
   attr_reader amount: Integer
   def initialize: (Integer amount) -> void
   def times: (Integer multiplier) -> Dollar
+  def ==: (Dollar other) -> bool
 end
