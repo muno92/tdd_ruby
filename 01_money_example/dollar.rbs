@@ -1,0 +1,8 @@
+# TypeProf 0.12.0
+
+# Classes
+class Dollar
+  attr_reader amount: Integer
+  def initialize: (Integer amount) -> void
+  def times: (Integer multiplier) -> Integer
+end
