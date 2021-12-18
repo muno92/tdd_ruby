@@ -8,6 +8,8 @@ class Franc < Money
     super
   end
 
+  # @param [Numeric] multiplier
+  # @return [Franc]
   def times(multiplier)
     Franc.new(@amount * multiplier)
   end
