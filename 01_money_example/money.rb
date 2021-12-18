@@ -15,6 +15,7 @@ class Money
   end
 
   def times(multiplier)
+    Money.new(@amount * multiplier, currency)
   end
 
   def ==(other)

@@ -12,7 +12,7 @@
 - [x] 5 CHF * 2 = 10 CHF
 - [ ] DollarとFrancの重複
 - [x] ~~equalsの一般化~~
-- [ ] timesの一般化
+- [x] ~~timesの一般化~~
 - [x] ~~FrancとDollarを比較する~~
 - [x] ~~通貨の概念（等価性比較でクラスが一致するかとクラスの概念を持ち込んでいるため）~~
 - [ ] it 'franc multiplication' を削除する？
