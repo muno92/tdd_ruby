@@ -18,6 +18,6 @@ class Money
   end
 
   def ==(other)
-    @amount == other.amount && other.is_a?(self.class)
+    @amount == other.amount && @currency == other.currency
   end
 end

@@ -27,4 +27,9 @@ RSpec.describe Dollar do
     expect(Money.dollar(1).currency).to eq 'USD'
     expect(Money.franc(1).currency).to eq 'CHF'
   end
+
+  it 'should check currency, not class' do
+    expect(Money.new(10, 'CHF')).to eq Franc.new(10, 'CHF')
+    expect(Money.new(10, 'CHF')).not_to eq Money.new(10, 'USD')
+  end
 end
