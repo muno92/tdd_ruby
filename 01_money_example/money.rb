@@ -5,6 +5,6 @@ class Money
   end
 
   def ==(other)
-    @amount == other.amount
+    @amount == other.amount && self.class == other.class
   end
 end

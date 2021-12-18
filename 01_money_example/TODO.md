@@ -13,4 +13,5 @@
 - [x] ~~DollarとFrancの重複~~
 - [x] ~~equalsの一般化~~
 - [ ] timesの一般化
-- [ ] FrancとDollarを比較するk
+- [x] ~~FrancとDollarを比較する~~
+- [ ] 通貨の概念（等価性比較でクラスが一致するかとクラスの概念を持ち込んでいるため）
