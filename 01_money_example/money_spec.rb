@@ -19,4 +19,9 @@ RSpec.describe Dollar do
     expect(five.times(2)).to eq Franc.new(10)
     expect(five.times(3)).to eq Franc.new(15)
   end
+
+  it 'franc equality' do
+    expect(Franc.new(5)).to eq Franc.new(5)
+    expect(Franc.new(5)).not_to eq Franc.new(6)
+  end
 end
