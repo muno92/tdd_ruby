@@ -1,15 +1,14 @@
-class Franc
+require_relative './money'
+
+class Franc < Money
   attr_reader :amount
 
   def initialize(amount)
     @amount = amount
+    super
   end
 
   def times(multiplier)
-    Dollar.new(@amount * multiplier)
-  end
-
-  def ==(other)
-    @amount == other.amount
+    Franc.new(@amount * multiplier)
   end
 end
