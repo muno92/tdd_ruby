@@ -1,5 +1,5 @@
 class Money
-  attr_reader :amount
+  attr_reader :amount, :currency
 
   def initialize(amount)
     @amount = amount
