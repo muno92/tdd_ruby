@@ -4,6 +4,9 @@
 class Dollar
   attr_reader amount: Integer
   def initialize: (Integer amount) -> void
-  def times: (Integer multiplier) -> Dollar
+  def times: (Integer multiplier) -> Money
   def ==: (Dollar other) -> bool
+end
+
+class Money
 end

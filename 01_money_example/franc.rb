@@ -2,7 +2,7 @@ require_relative './money'
 
 class Franc < Money
   # @param [Numeric] multiplier
-  # @return [Franc]
+  # @return [Money]
   def times(multiplier)
     Franc.new(@amount * multiplier)
   end
