@@ -1,8 +1,7 @@
 require 'rspec'
-require_relative './dollar'
-require_relative './franc'
+require_relative './money'
 
-RSpec.describe Dollar do
+RSpec.describe Money do
   it 'multiplication' do
     five = Money.dollar(5)
     expect(five.times(2)).to eq Money.dollar(10)
@@ -17,19 +16,12 @@ RSpec.describe Dollar do
     expect(Money.franc(5)).not_to eq Money.dollar(5)
   end
 
-  it 'franc multiplication' do
-    five = Money.franc(5)
-    expect(five.times(2)).to eq Money.franc(10)
-    expect(five.times(3)).to eq Money.franc(15)
-  end
-
   it 'currency' do
     expect(Money.dollar(1).currency).to eq 'USD'
     expect(Money.franc(1).currency).to eq 'CHF'
   end
 
   it 'should check currency, not class' do
-    expect(Money.new(10, 'CHF')).to eq Franc.new(10, 'CHF')
     expect(Money.new(10, 'CHF')).not_to eq Money.new(10, 'USD')
   end
 end
