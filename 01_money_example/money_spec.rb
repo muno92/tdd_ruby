@@ -1,6 +1,7 @@
 require 'rspec'
 require_relative './bank'
 require_relative './money'
+require_relative './sum'
 
 RSpec.describe Money do
   it 'multiplication' do
@@ -39,5 +40,12 @@ RSpec.describe Money do
     result = five.plus(five)
     expect(result.augend).to eq(five)
     expect(result.addend).to eq(five)
+  end
+
+  it 'test reduce sum' do
+    sum = Sum.new(Money.dollar(3), Money.dollar(4))
+    bank = Bank.new
+    result = bank.reduce(sum, 'USD')
+    expect(result).to eq Money.dollar(7)
   end
 end
