@@ -24,4 +24,9 @@ RSpec.describe Money do
   it 'should check currency, not class' do
     expect(Money.new(10, 'CHF')).not_to eq Money.new(10, 'USD')
   end
+
+  it 'simple addition' do
+    sum = Money.dollar(5).plus(Money.dollar(5))
+    expect(sum).to eq Money.dollar(10)
+  end
 end

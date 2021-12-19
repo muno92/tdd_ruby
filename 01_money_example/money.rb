@@ -18,6 +18,12 @@ class Money
     Money.new(@amount * multiplier, currency)
   end
 
+  # @param [Money] addend
+  # @return [Money]
+  def plus(addend)
+    Money.new(amount + addend.amount, currency)
+  end
+
   def ==(other)
     @amount == other.amount && @currency == other.currency
   end
