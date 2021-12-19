@@ -28,7 +28,7 @@ class Money < Expression
   end
 
   def reduce(bank, to)
-    rate = (@currency === 'CHF' && to === 'USD') ? 2 : 1
+    rate = bank.rate(@currency, to)
     Money.new(@amount / rate, to)
   end
 
