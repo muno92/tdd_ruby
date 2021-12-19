@@ -27,6 +27,10 @@ class Money < Expression
     Sum.new(self, addend)
   end
 
+  def reduce(to)
+    self
+  end
+
   def ==(other)
     @amount == other.amount && @currency == other.currency
   end
