@@ -2,6 +2,6 @@ class Expression
   def initialize(amount, currency)
   end
 
-  def reduce(to)
+  def reduce(bank, to)
   end
 end
