@@ -33,4 +33,11 @@ RSpec.describe Money do
     reduced = bank.reduce(sum, 'USD')
     expect(reduced).to eq Money.dollar(10)
   end
+
+  it 'plus should return sum' do
+    five = Money.dollar(5)
+    result = five.plus(five)
+    expect(result.augend).to eq(five)
+    expect(result.addend).to eq(five)
+  end
 end

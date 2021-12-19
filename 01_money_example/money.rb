@@ -1,4 +1,4 @@
-require_relative './expression'
+require_relative './sum'
 
 class Money < Expression
   attr_reader :amount, :currency
@@ -24,7 +24,7 @@ class Money < Expression
   # @param [Money] addend
   # @return [Expression]
   def plus(addend)
-    Money.new(amount + addend.amount, currency)
+    Sum.new(self, addend)
   end
 
   def ==(other)
