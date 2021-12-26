@@ -21,7 +21,7 @@ class Money < Expression
     Money.new(@amount * multiplier, currency)
   end
 
-  # @param [Money] addend
+  # @param [Expression] addend
   # @return [Expression]
   def plus(addend)
     Sum.new(self, addend)
